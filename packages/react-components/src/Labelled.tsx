@@ -173,7 +173,7 @@ const StyledDiv = styled.div`
         }
 
         .ui--Messages {
-          padding-bottom: 2rem;
+          padding-bottom:2rem;
           padding-left: 1.45rem;
           padding-top: 2rem;
         }
