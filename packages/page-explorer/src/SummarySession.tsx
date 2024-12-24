@@ -27,8 +27,9 @@ function SummarySession ({ className, withEra = true, withSession = true }: Prop
 
   const eraLabel = t('era');
   const sessionLabel = api.query.babe
-    ? t('epoch')
-    : t('session');
+    ? <span style={{ color: 'white' }}>{t('epoch')}</span>
+    : <span style={{ color: 'white' }}>{t('session')}</span>;
+
   const activeEraStart = sessionInfo?.activeEraStart.unwrapOr(null);
 
   return (

@@ -85,12 +85,12 @@ function Claim ({ accountId, className = '', ethereumAddress, ethereumSignature,
     >
       <StyledDiv className={className}>
         {t('Your Ethereum account')}
-        <h2>{addrToChecksum(ethereumAddress.toString())}</h2>
+        <h2 style={{ color: 'black' }}>{addrToChecksum(ethereumAddress.toString())}</h2>
         {hasClaim
           ? (
             <>
               {t('has a valid claim for')}
-              <h2><FormatBalance value={claimValue} /></h2>
+              <h2 style={{ color: 'black' }}><FormatBalance value={claimValue} /></h2>
               <Button.Group>
                 <TxButton
                   icon='paper-plane'
@@ -122,7 +122,7 @@ align-items: center;
 margin: 0 1rem;
 
 h3 {
-  font-family: monospace;
+  font-family: SpaceGrotesk;
   font-size: 1.5rem;
   max-width: 100%;
   margin: 0.5rem;
@@ -133,7 +133,7 @@ h3 {
 
 h2 {
   margin: 0.5rem 0 2rem;
-  font-family: monospace;
+  font-family: SpaceGrotesk;
   font-size: 2.5rem;
   font-weight: var(--font-weight-normal);
 }

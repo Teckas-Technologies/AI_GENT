@@ -16,11 +16,11 @@ export interface Props {
 function Progress ({ className = '', progress, style }: Props) {
   return (
     <StyledDiv
-      className={`${className} highlight--border`}
+      className={`${className} `}
       style={style}
     >
       <div
-        className='file-progress-bar highlight--bg'
+        className='file-progress-bar'
         style={{ width: `${progress}%` }}
       />
     </StyledDiv>
@@ -35,11 +35,12 @@ const StyledDiv = styled.div`
   border-radius: 0.7rem;
   border-style: solid;
   border-width: 1px;
-
+  
   .file-progress-bar {
     transition: width 100ms ease-in-out;
     width: 0;
     height: 100%;
+    background:red;
   }
 `;
 

@@ -25,19 +25,19 @@ function Summary ({ bestNumber, className = '', electionsInfo, hasElections }: P
   return (
     <SummaryBox className={className}>
       <section>
-        <CardSummary label={t('seats')}>
+        <CardSummary label={<span style={{ color: 'white' }}>{t('seats')}</span>}>
           {electionsInfo
             ? <>{formatNumber(electionsInfo.members.length)}{electionsInfo.desiredSeats && <>&nbsp;/&nbsp;{formatNumber(electionsInfo.desiredSeats)}</>}</>
             : <span className='--tmp'>99</span>}
         </CardSummary>
         {hasElections && (
           <>
-            <CardSummary label={t('runners up')}>
+            <CardSummary label={<span style={{ color: 'white' }}>{t('runners up')}</span>}>
               {electionsInfo
                 ? <>{formatNumber(electionsInfo.runnersUp.length)}{electionsInfo.desiredRunnersUp && <>&nbsp;/&nbsp;{formatNumber(electionsInfo.desiredRunnersUp)}</>}</>
                 : <span className='--tmp'>99 / 99</span>}
             </CardSummary>
-            <CardSummary label={t('candidates')}>
+            <CardSummary label={<span style={{ color: 'white' }}>{t('candidates')}</span>}>
               {electionsInfo
                 ? formatNumber(electionsInfo.candidateCount)
                 : <span className='--tmp'>99</span>}
@@ -47,7 +47,7 @@ function Summary ({ bestNumber, className = '', electionsInfo, hasElections }: P
       </section>
       {electionsInfo?.voteCount && (
         <section>
-          <CardSummary label={t('voting round')}>
+          <CardSummary label={<span style={{ color: 'white' }}>{t('voting round')}</span>}>
             #{formatNumber(electionsInfo.voteCount)}
           </CardSummary>
         </section>
@@ -55,7 +55,7 @@ function Summary ({ bestNumber, className = '', electionsInfo, hasElections }: P
       {electionsInfo && bestNumber && electionsInfo.termDuration && electionsInfo.termDuration.gt(BN_ZERO) && (
         <section>
           <CardSummary
-            label={t('term progress')}
+            label={<span style={{ color: 'white' }}>{t('term progress')}</span>}
             progress={{
               total: (electionsInfo && bestNumber) ? electionsInfo.termDuration : BN_THREE,
               value: (electionsInfo && bestNumber) ? bestNumber.mod(electionsInfo.termDuration) : BN_TWO,

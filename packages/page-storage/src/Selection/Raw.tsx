@@ -38,7 +38,7 @@ function Raw ({ onAdd }: Props): React.ReactElement<Props> {
       <div className='storage--actionrow-value'>
         <Input
           autoFocus
-          label={t('hex-encoded storage key')}
+          label={<span className='white-label'>{t('hex-encoded storage key')}</span>}
           onChange={_onChangeKey}
           onEnter={_onAdd}
         />

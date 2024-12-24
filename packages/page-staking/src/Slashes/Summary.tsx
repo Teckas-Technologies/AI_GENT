@@ -35,19 +35,19 @@ function Summary ({ slash: { era, nominators, reporters, total, validators } }: 
   return (
     <SummaryBox>
       <section>
-        <CardSummary label={t('validators')}>
+        <CardSummary label={<span style={{ color: 'white' }}>{t('validators')}</span>}>
           {formatNumber(validators.length)}
         </CardSummary>
-        <CardSummary label={t('nominators')}>
+        <CardSummary label={<span style={{ color: 'white' }}>{t('nominators')}</span>}>
           {formatNumber(nominators.length)}
         </CardSummary>
-        <CardSummary label={t('reporters')}>
+        <CardSummary label={<span style={{ color: 'white' }}>{t('reporters')}</span>}>
           {formatNumber(reporters.length)}
         </CardSummary>
       </section>
       {blockProgress.gtn(0) && (
         <CardSummary
-          label={t('defer')}
+          label={<span style={{ color: 'white' }}>{t('defer')}</span>}
           progress={{
             total: blockEnd,
             value: blockProgress,
@@ -55,7 +55,7 @@ function Summary ({ slash: { era, nominators, reporters, total, validators } }: 
           }}
         />
       )}
-      <CardSummary label={t('total')}>
+      <CardSummary label={<span style={{ color: 'white' }}>{t('total')}</span>}>
         <FormatBalance value={total} />
       </CardSummary>
     </SummaryBox>

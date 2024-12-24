@@ -238,18 +238,17 @@ function Modules ({ className = '', onAdd }: Props): React.ReactElement<Props> {
           <Columar.Column>
             <Output
               isDisabled
-              label={isPartialKey
-                ? t('encoded partial key')
-                : t('encoded storage key')
-              }
-              value={hexKey}
+              label={<span style={{ color: 'white' }}>
+                {isPartialKey ? t('encoded partial key') : t('encoded storage key')}
+              </span>}
+              value={<span style={{ color: 'white' }}>{hexKey}</span>}
               withCopy
             />
           </Columar.Column>
           <Columar.Column>
             <DecodeInspect
               inspect={inspect}
-              label={t('encoded key details')}
+              label={<span style={{ color: 'white' }}>{t('encoded key details')}</span>}
             />
           </Columar.Column>
         </Columar>
@@ -271,6 +270,7 @@ const StyledSection = styled.section`
 
     label {
       left: 2.05rem; /* 3.55 - 1.5 (diff from padding above) */
+      color:white;
     }
   }
 `;

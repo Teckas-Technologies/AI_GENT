@@ -18,9 +18,12 @@ function BlockHeaders ({ headers }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
-    [t('recent blocks'), 'start', 3]
+    [
+      <span style={{ color: 'black',fontWeight:"500" }}>{t('recent blocks')}</span>, // Added inline style for black color
+      'start',
+      3
+    ]
   ]);
-
   return (
     <Table
       empty={t('No blocks available')}

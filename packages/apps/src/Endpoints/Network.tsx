@@ -52,7 +52,7 @@ function NetworkDisplay ({ apiUrl, className = '', setApiUrl, value: { isChild, 
           withoutHl
         />
         <div className='endpointValue'>
-          <div>{name}</div>
+          <div style={{ color: 'white' }}>{name}</div>
           {isSelected && (isRelay || !!paraId) && (
             <div className='endpointExtra'>
               {isRelay
@@ -94,7 +94,8 @@ const StyledDiv = styled.div`
 
   &.isSelected,
   &:hover {
-    background: var(--bg-table);
+    background:  rgba(200, 200, 200, 0.1);
+    color:black;
   }
 
   .endpointSection {

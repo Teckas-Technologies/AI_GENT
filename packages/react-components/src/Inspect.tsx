@@ -76,8 +76,8 @@ function DecodedInspect ({ className, hex, inspect, label }: Props): React.React
         <tbody>
           {formatted.map(({ name, value }, i) => (
             <tr key={i}>
-              <td><label>{name}</label></td>
-              <td>{value}</td>
+              <td><label style={{ color: 'white' }}>{name}</label></td>
+              <td style={{ color: 'white' }}>{value}</td>
             </tr>
           ))}
           {link && (

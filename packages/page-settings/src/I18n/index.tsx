@@ -226,7 +226,7 @@ function Translate ({ className }: Props): React.ReactElement<Props> {
                 options={keys}
                 value={lng}
               />
-              {t('{{done}}/{{total}}, {{progress}}% done', { replace: progressDisplay(modProgress) })}
+              <span style={{ color: 'white' }}>{t('{{done}}/{{total}}, {{progress}}% done', { replace: progressDisplay(modProgress) })}</span>
             </div>
             <Progress
               total={modProgress[1]}
@@ -242,7 +242,9 @@ function Translate ({ className }: Props): React.ReactElement<Props> {
                 options={modules}
                 value={record}
               />
-              {t('{{done}}/{{total}}, {{progress}}% done', { replace: progressDisplay(allProgress[record]) })}
+              <span style={{ color: 'white' }}>
+                {t('{{done}}/{{total}}, {{progress}}% done', { replace: progressDisplay(allProgress[record]) })}
+              </span>
             </div>
             <Progress
               total={allProgress[record]?.[1]}
@@ -255,8 +257,8 @@ function Translate ({ className }: Props): React.ReactElement<Props> {
         <Toggle
           label={
             withEmpty
-              ? t('include all empty strings in the generated file')
-              : t('do not include empty strings in the generated file')
+              ? <span style={{ color: 'white' }}>{t('include all empty strings in the generated file')}</span>
+              : <span style={{ color: 'white' }}>{t('do not include empty strings in the generated file')}</span>
           }
           onChange={toggleWithEmpty}
           value={withEmpty}
@@ -265,12 +267,12 @@ function Translate ({ className }: Props): React.ReactElement<Props> {
       <Button.Group>
         <Button
           icon='sync'
-          label={t('Apply to UI')}
+          label={<span style={{ color: 'white' }}>{t('Apply to UI')}</span>}
           onClick={_doApply}
         />
         <Button
           icon='download'
-          label={t('Generate {{lng}}/translation.json', { replace: { lng } })}
+          label={<span style={{ color: 'white' }}>{t('Generate {{lng}}/translation.json', { replace: { lng } })}</span>}
           onClick={_onDownload}
         />
       </Button.Group>

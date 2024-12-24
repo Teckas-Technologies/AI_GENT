@@ -61,7 +61,7 @@ function Summary ({ events, maxBlockWeight, maxProofSize, signedBlock }: Props):
       <section>
         {api.query.balances && (
           <>
-            <CardSummary label={t('deposits')}>
+            <CardSummary label={<span style={{ color: 'white' }}>{t('deposits')}</span>}>
               <FormatBalance
                 className={deposits ? '' : '--tmp'}
                 value={deposits || BN_ONE}
@@ -69,7 +69,7 @@ function Summary ({ events, maxBlockWeight, maxProofSize, signedBlock }: Props):
             </CardSummary>
             <CardSummary
               className='media--1000'
-              label={t('transfers')}
+              label={<span style={{ color: 'white' }}>{t('transfers')}</span>}
             >
               <FormatBalance
                 className={transfers ? '' : '--tmp'}
@@ -81,7 +81,7 @@ function Summary ({ events, maxBlockWeight, maxProofSize, signedBlock }: Props):
       </section>
       <section>
         <CardSummary
-          label={t('block weight')}
+          label={<span style={{ color: 'white' }}>{t('block weight')}</span>}
           progress={{
             hideValue: true,
             isBlurred: !(maxBlockWeight && weight),
@@ -95,7 +95,7 @@ function Summary ({ events, maxBlockWeight, maxProofSize, signedBlock }: Props):
         </CardSummary>
         {maxProofSize && size &&
           <CardSummary
-            label={t('proof size')}
+            label={<span style={{ color: 'white' }}>{t('proof size')}</span>}
             progress={{
               hideValue: true,
               isBlurred: false,
@@ -107,12 +107,12 @@ function Summary ({ events, maxBlockWeight, maxProofSize, signedBlock }: Props):
           </CardSummary>}
       </section>
       <section className='media--900'>
-        <CardSummary label={t('event count')}>
+        <CardSummary label={<span style={{ color: 'white' }}>{t('event count')}</span>}>
           {events
             ? formatNumber(events.length)
             : <span className='--tmp'>99</span>}
         </CardSummary>
-        <CardSummary label={t('extrinsic count')}>
+        <CardSummary label={<span style={{ color: 'white' }}>{t('extrinsic count')}</span>}>
           {signedBlock
             ? formatNumber(signedBlock.block.extrinsics.length)
             : <span className='--tmp'>99</span>}

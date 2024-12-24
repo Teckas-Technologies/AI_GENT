@@ -25,7 +25,7 @@ function Legend ({ className, isRelay, minCommission }: Props): React.ReactEleme
           color='blue'
           icon='chevron-right'
         />
-        <span>{t('Next session')}</span>
+        <span style={{ color: 'white' }}>{t('Next session')}</span>
       </span>
       {minCommission && (
         <span>
@@ -33,7 +33,7 @@ function Legend ({ className, isRelay, minCommission }: Props): React.ReactEleme
             color='red'
             icon='cancel'
           />
-          <span>{t('Chilled')}</span>
+          <span style={{ color: 'white' }}>{t('Chilled')}</span>
         </span>
       )}
       {isRelay && (
@@ -42,7 +42,7 @@ function Legend ({ className, isRelay, minCommission }: Props): React.ReactEleme
             color='purple'
             icon='vector-square'
           />
-          <span>{t('Para validator')}</span>
+          <span style={{ color: 'white' }}>{t('Para validator')}</span>
         </span>
       )}
       <span>
@@ -50,49 +50,49 @@ function Legend ({ className, isRelay, minCommission }: Props): React.ReactEleme
           color='green'
           info='5'
         />
-        <span>{t('Produced blocks')}</span>
+        <span style={{ color: 'white' }}>{t('Produced blocks')}</span>
       </span>
       <span>
         <Badge
           color='green'
           icon='envelope'
         />
-        <span>{t('Online message')}</span>
+        <span style={{ color: 'white' }}>{t('Online message')}</span>
       </span>
       <span>
         <Badge
           color='green'
           icon='hand-paper'
         />
-        <span>{t('Nominating')}</span>
+        <span style={{ color: 'white' }}>{t('Nominating')}</span>
       </span>
       <span>
         <Badge
           color='red'
           icon='balance-scale-right'
         />
-        <span>{t('Oversubscribed')}</span>
+        <span style={{ color: 'white' }}>{t('Oversubscribed')}</span>
       </span>
       <span>
         <Badge
           color='red'
           icon='skull-crossbones'
         />
-        <span>{t('Slashed')}</span>
+        <span style={{ color: 'white' }}>{t('Slashed')}</span>
       </span>
       <span>
         <Badge
           color='red'
           icon='user-slash'
         />
-        <span>{t('Blocks nominations')}</span>
+        <span style={{ color: 'white' }}>{t('Blocks nominations')}</span>
       </span>
       <span>
         <Tag
           color='lightgrey'
           label='1,220'
         />
-        <span>{t('Era points')}</span>
+        <span style={{ color: 'white' }}>{t('Era points')}</span>
       </span>
     </StyledDiv>
   );

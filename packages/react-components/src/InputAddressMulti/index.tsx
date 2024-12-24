@@ -72,7 +72,7 @@ function InputAddressMulti ({ available, availableLabel, className = '', default
       />
       <div className='ui--InputAddressMulti-columns'>
         <div className='ui--InputAddressMulti-column'>
-          <label>{valueLabel}</label>
+          <label style={{ color: 'white' }}>{valueLabel}</label>
           <div className='ui--InputAddressMulti-items'>
             {selected.map((address): React.ReactNode => (
               <Selected

@@ -21,7 +21,7 @@ function StringInput ({ className = '', onChange, original, tkey, tval }: Props)
 
   return (
     <StyledDiv className={className}>
-      <div className='label'>{original}</div>
+      <div className='label' style={{ color: 'white' }}>{original}</div>
       <Input
         onChange={_onChange}
         value={tval}

@@ -18,7 +18,7 @@ function Summary ({ className, numAssets }: Props): React.ReactElement<Props> {
 
   return (
     <SummaryBox className={className}>
-      <CardSummary label={t('assets')}>
+      <CardSummary label={<span style={{ color: 'white' }}>{t('assets')}</span>}>
         {formatNumber(numAssets)}
       </CardSummary>
     </SummaryBox>

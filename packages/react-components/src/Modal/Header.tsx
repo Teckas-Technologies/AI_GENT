@@ -16,7 +16,7 @@ function Header ({ className = '', header, onClose }: Props): React.ReactElement
   return (
     <StyledDiv className={`${className} ui--Modal-Header`}>
       {header && (
-        <h1>{header}</h1>
+        <h1 style={{ color: 'black' }}>{header}</h1>
       )}
       <Button
         dataTestId='close-modal'

@@ -27,7 +27,7 @@ function Summary ({ className = '', stakingOverview, targets: { counterForNomina
   return (
     <StyledSummaryBox className={className}>
       <section>
-        <CardSummary label={t('validators')}>
+        <CardSummary label={<span style={{ color: 'white' }}>{t('validators')}</span>}>
           {stakingOverview
             ? <>{formatNumber(stakingOverview.validators.length)}&nbsp;/&nbsp;{formatNumber(stakingOverview.validatorCount)}</>
             : <span className='--tmp'>999 / 999</span>
@@ -35,7 +35,7 @@ function Summary ({ className = '', stakingOverview, targets: { counterForNomina
         </CardSummary>
         <CardSummary
           className='media--900'
-          label={t('waiting')}
+          label={<span style={{ color: 'white' }}>{t('waiting')}</span>}
         >
           {waitingIds
             ? formatNumber(waitingIds.length)
@@ -44,11 +44,11 @@ function Summary ({ className = '', stakingOverview, targets: { counterForNomina
         </CardSummary>
         <CardSummary
           className='media--1000'
-          label={
-            counterForNominators
+          label={<span style={{ color: 'white' }}>
+            {counterForNominators
               ? t('active / nominators')
-              : t('nominators')
-          }
+              : t('nominators')}
+          </span>}
         >
           {nominators
             ? (
@@ -75,7 +75,7 @@ function Summary ({ className = '', stakingOverview, targets: { counterForNomina
         {(stakedFraction > 0) && (
           <CardSummary
             className='media--1300'
-            label={t('staked')}
+            label={<span style={{ color: 'white' }}>{t('staked')}</span>}
           >
             <>{(stakedFraction * 100).toFixed(1)}{percent}</>
           </CardSummary>
@@ -83,7 +83,7 @@ function Summary ({ className = '', stakingOverview, targets: { counterForNomina
         {(inflation > 0) && Number.isFinite(inflation) && (
           <CardSummary
             className='media--1200'
-            label={t('inflation')}
+            label={<span style={{ color: 'white' }}>{t('inflation')}</span>}
           >
             <>{inflation.toFixed(1)}{percent}</>
           </CardSummary>

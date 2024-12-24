@@ -120,7 +120,7 @@ const StyledTr = styled.tr`
       display: inline;
 
       &:first-child {
-        font-family: monospace;
+        font-family: SpaceGrotesk;
         margin-right: 0.5rem;
       }
     }

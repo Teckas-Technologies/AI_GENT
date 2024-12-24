@@ -74,7 +74,7 @@ const StyledNavLink = styled(NavLink)`
   }
 
   &.active {
-    color: var(--color-text) !important;
+    color: white !important;
     font-weight: var(--font-weight-normal);
 
     &:hover {

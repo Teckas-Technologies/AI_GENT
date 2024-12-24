@@ -54,7 +54,7 @@ function Day ({ className, date, hasNextDay, now, scheduled, setNextDay, setPrev
 
   return (
     <StyledDiv className={className}>
-      <h1>
+      <h1 style={{ color: 'black' }}>
         <div>
           <Button
             className='all-events-button'

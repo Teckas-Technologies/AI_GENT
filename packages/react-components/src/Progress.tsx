@@ -27,7 +27,7 @@ function DivClip ({ angle, type }: RotateProps): React.ReactElement<RotateProps>
   return (
     <div className={`clip ${type}`}>
       <div
-        className='highlight--bg'
+        className='highlight--bg-bar'
         style={{ transform: `rotate(${angle}deg)` }}
       />
     </div>

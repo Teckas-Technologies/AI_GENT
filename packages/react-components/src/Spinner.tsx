@@ -56,7 +56,7 @@ const StyledSpinner = styled.div`
   }
 
   .text {
-    color: inherit !important;
+    color: white;
     margin: 0.25rem auto 1.5rem auto;
     opacity: var(--opacity-light);
 

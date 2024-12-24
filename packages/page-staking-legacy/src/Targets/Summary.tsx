@@ -70,7 +70,7 @@ function Summary ({ avgStaked, className, lastEra, lowStaked, minNominated, minN
     <StyledSummaryBox className={className}>
       <section className='media--800'>
         <CardSummary
-          label={t('total staked')}
+          label={<span style={{ color: 'white' }}>{t('total staked')}</span>}
           progress={progressStake}
         >
           <FormatBalance
@@ -92,7 +92,7 @@ function Summary ({ avgStaked, className, lastEra, lowStaked, minNominated, minN
       </section>
       <section className='media--1000'>
         <CardSummary
-          label={`${t('lowest / avg staked')}`}
+          label={<span style={{ color: 'white' }}>{`${t('lowest / avg staked')}`}</span>}
           progress={progressAvg}
         >
           <span className={progressAvg.isBlurred ? '--tmp' : ''}>
@@ -114,10 +114,11 @@ function Summary ({ avgStaked, className, lastEra, lowStaked, minNominated, minN
         {minNominated?.gt(BN_ZERO) && (
           <CardSummary
             className='media--1600'
-            label={
-              minNominatorBond
+            label={<span style={{ color: 'white' }}>
+              {minNominatorBond
                 ? t('min nominated / threshold')
                 : t('min nominated')}
+            </span>}
           >
             <FormatBalance
               value={minNominated}
@@ -137,7 +138,7 @@ function Summary ({ avgStaked, className, lastEra, lowStaked, minNominated, minN
         )}
       </section>
       <section>
-        <CardSummary label={t('last reward')}>
+        <CardSummary label={<span style={{ color: 'white' }}>{t('last reward')}</span>}>
           <FormatBalance
             className={lastReward ? '' : '--tmp'}
             value={lastReward || 1}

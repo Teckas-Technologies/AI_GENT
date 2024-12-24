@@ -144,14 +144,14 @@ function Latency ({ className }: Props): React.ReactElement<Props> {
     <StyledDiv className={className}>
       <SummaryBox>
         <section>
-          <CardSummary label={t('avg')}>
+          <CardSummary label={<span className='card-summary-label'>{t('avg')}</span>}>
             {isLoaded
               ? formatTime(timeAvg)
               : EMPTY_TIME}
           </CardSummary>
           <CardSummary
             className='media--1000'
-            label={t('std dev')}
+            label={<span className='card-summary-label'>{t('std dev')}</span>}
           >
             {isLoaded
               ? formatTime(stdDev)
@@ -159,19 +159,19 @@ function Latency ({ className }: Props): React.ReactElement<Props> {
           </CardSummary>
         </section>
         <section>
-          <CardSummary label={t('min')}>
+          <CardSummary label={<span className='card-summary-label'>{t('min')}</span>}>
             {isLoaded
               ? formatTime(timeMin)
               : EMPTY_TIME}
           </CardSummary>
-          <CardSummary label={t('max')}>
+          <CardSummary label={<span className='card-summary-label'>{t('max')}</span>}>
             {isLoaded
               ? formatTime(timeMax)
               : EMPTY_TIME
             }
           </CardSummary>
         </section>
-        <CardSummary label={t('last')}>
+        <CardSummary label={<span className='card-summary-label'>{t('last')}</span>}>
           {isLoaded
             ? formatTime(points.blockLast, 1)
             : EMPTY_TIME}
@@ -209,6 +209,9 @@ const StyledDiv = styled.div`
       font-size: var(--font-percent-tiny);
     }
   }
+    .card-summary-label {
+  color: white;
+}
 `;
 
 export default React.memo(Latency);

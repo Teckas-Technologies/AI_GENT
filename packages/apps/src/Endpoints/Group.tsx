@@ -69,9 +69,10 @@ const StyledDiv = styled.div`
     padding: 0.75rem 1rem;
     position: relative;
     text-transform: uppercase;
+    color:white;
 
     &:hover {
-      background: var(--bg-table);
+      background:  rgba(200, 200, 200, 0.1);
     }
 
     &.isSpaced {

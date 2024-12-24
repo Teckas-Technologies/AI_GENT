@@ -201,7 +201,14 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
   const header = useMemo(
     (): Record<GroupName, [React.ReactNode?, string?, number?, (() => void)?][]> => {
       const ret: Record<GroupName, [React.ReactNode?, string?, number?, (() => void)?][]> = {
-        accounts: [[<>{t('accounts')}<div className='sub'>{t('all locally stored accounts')}</div></>]],
+        accounts: [[
+          <>
+            <span style={{ color: 'black' }}>{t('accounts')}</span>
+            <div className='sub' style={{ color: 'black' }}>
+              {t('all locally stored accounts')}
+            </div>
+          </>
+        ]],
         chopsticks: [[<>{t('chopsticks')}<div className='sub'>{t('local accounts added via chopsticks fork')}</div></>]],
         hardware: [[<>{t('hardware')}<div className='sub'>{t('accounts managed via hardware devices')}</div></>]],
         injected: [[<>{t('extension')}<div className='sub'>{t('accounts available via browser extensions')}</div></>]],
@@ -401,7 +408,12 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
       {!isNextTick || !sortedAccounts.length
         ? (
           <Table
-            empty={isNextTick && sortedAccounts && t("You don't have any accounts. Some features are currently hidden and will only become available once you have accounts.")}
+            className='text white'
+            empty={isNextTick && sortedAccounts && (
+              <span style={{ color: 'black' }}>
+                {t("You don't have any accounts. Some features are currently hidden and will only become available once you have accounts.")}
+              </span>
+            )}
             header={header.accounts}
           />
         )
@@ -426,7 +438,9 @@ const StyledDiv = styled.div`
   .ui--Dropdown {
     width: 15rem;
   }
-
+.text white{
+color:black;
+}
   .header-box {
     .dropdown-section {
       display: flex;

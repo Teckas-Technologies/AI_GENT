@@ -18,7 +18,7 @@ function CurrentSection ({ className = '', icon, text }: Props): React.ReactElem
   return (
     <StyledDiv className={`${className} active-tab`}>
       <Icon icon={icon} />
-      <span>{text}</span>
+      <span style={{ color: 'white' }}>{text}</span>
     </StyledDiv>
   );
 }

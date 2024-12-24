@@ -20,7 +20,7 @@ function Summary ({ balance, className }: Props) {
 
   return (
     <SummaryBox className={className}>
-      <CardSummary label={t('total balance')}>
+      <CardSummary label={<span style={{ color: 'white' }}>{t('total balance')}</span>}>
         <FormatBalance
           className={balance ? '' : '--tmp'}
           value={balance?.total || 1}
@@ -28,14 +28,14 @@ function Summary ({ balance, className }: Props) {
       </CardSummary>
       <CardSummary
         className='media--900'
-        label={t('total transferable')}
+        label={<span style={{ color: 'white' }}>{t('total transferable')}</span>}
       >
         <FormatBalance
           className={balance ? '' : '--tmp'}
           value={balance?.transferable || 1}
         />
       </CardSummary>
-      <CardSummary label={t('total locked')}>
+      <CardSummary label={<span style={{ color: 'white' }}>{t('total locked')}</span>}>
         <FormatBalance
           className={balance ? '' : '--tmp'}
           value={balance?.locked || 1}
@@ -44,21 +44,21 @@ function Summary ({ balance, className }: Props) {
       {balance?.bonded.gtn(0) &&
         <CardSummary
           className='media--1100'
-          label={t('bonded')}
+          label={<span style={{ color: 'white' }}>{t('bonded')}</span>}
         >
           <FormatBalance value={balance.bonded} />
         </CardSummary>}
       {balance?.redeemable.gtn(0) &&
         <CardSummary
           className='media--1500'
-          label={t('redeemable')}
+          label={<span style={{ color: 'white' }}>{t('redeemable')}</span>}
         >
           <FormatBalance value={balance.redeemable} />
         </CardSummary>}
       {balance?.unbonding.gtn(0) &&
         <CardSummary
           className='media--1300'
-          label={t('unbonding')}
+          label={<span style={{ color: 'white' }}>{t('unbonding')}</span>}
         >
           <FormatBalance value={balance.unbonding} />
         </CardSummary>}

@@ -36,7 +36,7 @@ function Summary ({ approvalCount, proposalCount }: Props): React.ReactElement<P
       <section>
         <CardSummary
           className='media--1700'
-          label={t('open')}
+          label={<span style={{ color: 'white' }}>{t('open')}</span>}
         >
           {proposalCount === undefined
             ? <span className='--tmp'>99</span>
@@ -44,7 +44,7 @@ function Summary ({ approvalCount, proposalCount }: Props): React.ReactElement<P
         </CardSummary>
         <CardSummary
           className='media--1600'
-          label={t('approved')}
+          label={<span style={{ color: 'white' }}>{t('approved')}</span>}
         >
           {approvalCount === undefined
             ? <span className='--tmp'>99</span>
@@ -52,7 +52,7 @@ function Summary ({ approvalCount, proposalCount }: Props): React.ReactElement<P
         </CardSummary>
         <CardSummary
           className='media--1400'
-          label={t('total')}
+          label={<span style={{ color: 'white' }}>{t('total')}</span>}
         >
           {totalProposals === undefined
             ? <span className='--tmp'>99</span>
@@ -63,7 +63,7 @@ function Summary ({ approvalCount, proposalCount }: Props): React.ReactElement<P
         {!pendingProposals.isZero() && (
           <CardSummary
             className='media--1100'
-            label={t('approved')}
+            label={<span style={{ color: 'white' }}>{t('approved')}</span>}
           >
             <FormatBalance
               value={pendingProposals}
@@ -74,7 +74,7 @@ function Summary ({ approvalCount, proposalCount }: Props): React.ReactElement<P
         {!pendingBounties.isZero() && (
           <CardSummary
             className='media--1200'
-            label={t('bounties')}
+            label={<span style={{ color: 'white' }}>{t('bounties')}</span>}
           >
             <FormatBalance
               value={pendingBounties}
@@ -84,7 +84,7 @@ function Summary ({ approvalCount, proposalCount }: Props): React.ReactElement<P
         )}
         <CardSummary
           className='media--1300'
-          label={t('next burn')}
+          label={<span style={{ color: 'white' }}>{t('next burn')}</span>}
         >
           <FormatBalance
             className={burn ? '' : '--tmp'}
@@ -95,7 +95,7 @@ function Summary ({ approvalCount, proposalCount }: Props): React.ReactElement<P
       </section>
       <section>
         <CardSummary
-          label={t('spendable / available')}
+          label={<span style={{ color: 'white' }}>{t('spendable / available')}</span>}
           progress={{
             hideValue: true,
             isBlurred: !hasSpendable,
@@ -119,7 +119,7 @@ function Summary ({ approvalCount, proposalCount }: Props): React.ReactElement<P
       {bestNumber && spendPeriod.gt(BN_ZERO) && (
         <section>
           <CardSummary
-            label={t('spend period')}
+            label={<span style={{ color: 'white' }}>{t('spend period')}</span>}
             progress={{
               total: spendPeriod,
               value: bestNumber.mod(spendPeriod),

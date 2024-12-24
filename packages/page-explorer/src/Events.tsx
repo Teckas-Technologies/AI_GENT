@@ -45,7 +45,10 @@ function Events ({ className = '', emptyLabel, error, eventClassName, events, la
 
   const header = useMemo<[React.ReactNode?, string?, number?][]>(
     () => [
-      [label || t('recent events'), 'start']
+      [
+        <span style={{ color: 'black',fontWeight:"500" }}>{label || t('recent events')}</span>,
+        'start'
+      ]
     ],
     [label, t]
   );

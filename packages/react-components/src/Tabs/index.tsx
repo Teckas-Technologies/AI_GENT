@@ -65,7 +65,7 @@ function Tabs ({ basePath, className = '', hidden, items }: Props): React.ReactE
         <ul className='ui--TabsList'>
           {filtered.map((tab, index) => (
             <li
-              className={tab.isHidden ? '--hidden' : ''}
+              className={tab.isHidden ? '--hiden' : ''}
               key={index}
             >
               <Tab

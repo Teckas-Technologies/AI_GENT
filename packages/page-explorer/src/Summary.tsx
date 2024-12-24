@@ -24,12 +24,12 @@ function Summary ({ eventCount }: Props): React.ReactElement {
       <section>
         {api.query.timestamp && (
           <>
-            <CardSummary label={t('last block')}>
+            <CardSummary label={<span style={{ color: 'white' }}>{t('last block')}</span>}>
               <TimeNow />
             </CardSummary>
             <CardSummary
               className='media--800'
-              label={t('target')}
+              label={<span style={{ color: 'white' }}>{t('target')}</span>}
             >
               <BlockToTime value={BN_ONE} />
             </CardSummary>
@@ -39,14 +39,14 @@ function Summary ({ eventCount }: Props): React.ReactElement {
           <>
             <CardSummary
               className='media--800'
-              label={t('total issuance')}
+              label={<span style={{ color: 'white' }}>{t('total issuance')}</span>}
             >
               <TotalIssuance />
             </CardSummary>
             {!!api.query.balances.inactiveIssuance && (
               <CardSummary
                 className='media--1300'
-                label={t('inactive issuance')}
+                label={<span style={{ color: 'white' }}>{t('inactive issuance')}</span>}
               >
                 <TotalInactive />
               </CardSummary>
@@ -60,16 +60,16 @@ function Summary ({ eventCount }: Props): React.ReactElement {
       <section>
         <CardSummary
           className='media--1400'
-          label={t('last events')}
+          label={<span style={{ color: 'white' }}>{t('last events')}</span>}
         >
           {formatNumber(eventCount)}
         </CardSummary>
         {api.query.grandpa && (
-          <CardSummary label={t('finalized')}>
+          <CardSummary label={<span style={{ color: 'white' }}>{t('finalized')}</span>}>
             <BestFinalized />
           </CardSummary>
         )}
-        <CardSummary label={t('best')}>
+        <CardSummary label={<span style={{ color: 'white' }}>{t('best')}</span>}>
           <BestNumber />
         </CardSummary>
       </section>

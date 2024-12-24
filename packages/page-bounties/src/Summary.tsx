@@ -30,23 +30,23 @@ function Summary ({ className = '', info: { bestNumber, bounties, bountyCount, c
     <SummaryBox className={`${className} ui--BountySummary`}>
       <section>
         {bounties && (
-          <CardSummary label={t('active')}>
+          <CardSummary label={<span style={{ color: 'white' }}>{t('active')}</span>}>
             {formatNumber(bounties.length)}
           </CardSummary>
         )}
         {bountyCount && bounties && (
-          <CardSummary label={t('past')}>
+          <CardSummary label={<span style={{ color: 'white' }}>{t('past')}</span>}>
             {formatNumber(bountyCount.subn(bounties.length))}
           </CardSummary>
         )}
         {childCount && (
-          <CardSummary label={t('children')}>
+          <CardSummary label={<span style={{ color: 'white' }}>{t('children')}</span>}>
             {formatNumber(childCount)}
           </CardSummary>
         )}
       </section>
       <section>
-        <CardSummary label={t('active total')}>
+        <CardSummary label={<span style={{ color: 'white' }}>{t('active total')}</span>}>
           <FormatBalance
             value={totalValue}
             withSi
@@ -56,7 +56,7 @@ function Summary ({ className = '', info: { bestNumber, bounties, bountyCount, c
       <section>
         {bestNumber && !spendPeriod.isZero() && (
           <CardSummary
-            label={t('funding period')}
+            label={<span style={{ color: 'white' }}>{t('funding period')}</span>}
             progress={{
               total: spendPeriod,
               value: bestNumber.mod(spendPeriod),

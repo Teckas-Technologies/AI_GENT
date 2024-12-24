@@ -36,7 +36,7 @@ function Head ({ children, className = '', filter, header, isEmpty }: Props): Re
             onClick={onClick}
           >
             {index === 0
-              ? <h1>{label}</h1>
+              ? <h1 style={{ color: 'black' }}>{label}</h1>
               : !isEmpty && label && <label>{label}</label>
             }
           </th>

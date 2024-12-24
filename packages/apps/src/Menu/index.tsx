@@ -124,7 +124,7 @@ function Menu ({ className = '' }: Props): React.ReactElement<Props> {
   );
 
   return (
-    <StyledDiv className={`${className}${(!apiProps.isApiReady || !apiProps.isApiConnected) ? ' isLoading' : ''} highlight--bg`}>
+    <StyledDiv className={`${className}${(!apiProps.isApiReady || !apiProps.isApiConnected) ? ' isLoading' : ''}`}>
       <div className='menuContainer'>
         <div className='menuSection'>
           <ChainInfo />
@@ -176,13 +176,15 @@ const StyledDiv = styled.div`
     width: 100%;
     max-width: var(--width-full);
     margin: 0 auto;
+    background-color:#060a09;
+    font-family: 'SpaceGrotesk';
   }
 
   &.isLoading {
     background: #999 !important;
 
     .menuActive {
-      background: var(--bg-page);
+      color:white;
     }
 
     &:before {
@@ -200,10 +202,10 @@ const StyledDiv = styled.div`
   }
 
   .menuActive {
-    background: var(--bg-tabs);
+   
     border-bottom: none;
     border-radius: 0.25rem 0.25rem 0 0;
-    color: var(--color-text);
+    color: red;
     padding: 1rem 1.5rem;
     margin: 0 1rem -1px;
     z-index: 1;
@@ -226,6 +228,12 @@ const StyledDiv = styled.div`
     > li + li {
       margin-left: 0.375rem
     }
+  }
+  
+.menuItems > li a[href*="github"], 
+  .menuItems > li a[href*="wiki"],
+  .menuItems > li a[href*="settings"] {
+    font-weight: 600; 
   }
 
   .ui--NodeInfo {

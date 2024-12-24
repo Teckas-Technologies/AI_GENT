@@ -42,7 +42,7 @@ function Month ({ className, hasNextMonth, lastDay, now, scheduled, setDay, setN
 
   return (
     <StyledDiv className={className}>
-      <h1>
+      <h1 style={{ color: 'black' }}>
         <div>{monthRef.current[dateMonth.getMonth()]} {dateMonth.getFullYear()}</div>
         <Button.Group>
           <Button

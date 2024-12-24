@@ -158,11 +158,10 @@ class InputAddress extends React.PureComponent<Props, State> {
       // This is nasty, but since this things is non-functional, there is not much
       // we can do (well, wrap it, however that approach is deprecated here)
       return (
-        <Static
-          className={className}
-          label={label}
-        >
-          No accounts are available for selection.
+        <Static className={className} label={label}>
+          <span style={{ color: 'white' }}>
+            No accounts are available for selection.
+          </span>
         </Static>
       );
     }
@@ -198,7 +197,7 @@ class InputAddress extends React.PureComponent<Props, State> {
         isDisabled={isDisabled}
         isError={isError}
         isMultiple={isMultiple}
-        label={label}
+        label={<span style={{ color: 'white' }}>{label}</span>}
         labelExtra={labelExtra}
         onChange={
           isMultiple

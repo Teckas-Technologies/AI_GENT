@@ -119,24 +119,24 @@ function Api ({ className }: Props): React.ReactElement<Props> {
     <StyledDiv className={className}>
       <SummaryBox>
         <section>
-          <CardSummary label={t('sent')}>
+          <CardSummary label={<span style={{ color: 'white' }}>{t('sent')}</span>}>
             {isLoaded
               ? <>{formatNumber(last.stats.total.bytesSent / 1024)}kB</>
               : EMPTY_BYTES}
           </CardSummary>
-          <CardSummary label={t('recv')}>
+          <CardSummary label={<span style={{ color: 'white' }}>{t('recv')}</span>}>
             {isLoaded
               ? <>{formatNumber(last.stats.total.bytesRecv / 1024)}kB</>
               : EMPTY_BYTES}
           </CardSummary>
         </section>
         <section>
-          <CardSummary label={t('total req')}>
+          <CardSummary label={<span style={{ color: 'white' }}>{t('total req')}</span>}>
             {isLoaded
               ? <>{formatNumber(last.stats.total.requests)}</>
               : EMPTY_NUMBER}
           </CardSummary>
-          <CardSummary label={t('total sub')}>
+          <CardSummary label={<span style={{ color: 'white' }}>{t('total sub')}</span>}>
             {isLoaded
               ? <>{formatNumber(last.stats.total.subscriptions)}</>
               : EMPTY_NUMBER}

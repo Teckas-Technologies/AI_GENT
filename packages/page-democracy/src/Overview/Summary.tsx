@@ -32,24 +32,24 @@ function Summary ({ referendumCount }: Props): React.ReactElement<Props> {
   return (
     <SummaryBox>
       <section>
-        <CardSummary label={t('proposals')}>
+        <CardSummary label={<span style={{ color: 'white' }}>{t('proposals')}</span>}>
           {activeProposals
             ? formatNumber(activeProposals.length)
             : <span className='--tmp'>99</span>}
         </CardSummary>
-        <CardSummary label={t('total')}>
+        <CardSummary label={<span style={{ color: 'white' }}>{t('total')}</span>}>
           {publicPropCount
             ? formatNumber(publicPropCount)
             : <span className='--tmp'>99</span>}
         </CardSummary>
       </section>
       <section>
-        <CardSummary label={t('referenda')}>
+        <CardSummary label={<span style={{ color: 'white' }}>{t('referenda')}</span>}>
           {referendumCount !== undefined
             ? formatNumber(referendumCount)
             : <span className='--tmp'>99</span>}
         </CardSummary>
-        <CardSummary label={t('total')}>
+        <CardSummary label={<span style={{ color: 'white' }}>{t('total')}</span>}>
           {referendumTotal
             ? formatNumber(referendumTotal)
             : <span className='--tmp'>99</span>}
@@ -58,7 +58,7 @@ function Summary ({ referendumCount }: Props): React.ReactElement<Props> {
       {api.consts.democracy.launchPeriod && (
         <section className='media--1100'>
           <CardSummary
-            label={t('launch period')}
+            label={<span style={{ color: 'white' }}>{t('launch period')}</span>}
             progress={{
               isBlurred: !bestNumber,
               total: api.consts.democracy.launchPeriod,

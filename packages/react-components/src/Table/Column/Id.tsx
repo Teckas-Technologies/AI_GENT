@@ -24,7 +24,7 @@ function Id ({ children, className = '', colSpan, rowSpan, value }: Props): Reac
       colSpan={colSpan}
       rowSpan={rowSpan}
     >
-      <h2 className='--digits'>{formatNumber(value)}</h2>
+      <h2 className='--digits' style={{ color: 'black' }}>{formatNumber(value)}</h2>
       {children}
     </StyledTd>
   );

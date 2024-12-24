@@ -31,7 +31,7 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
   const isNextTick = useNextTick();
 
   const headerRef = useRef<([React.ReactNode?, string?, number?] | false)[]>([
-    [t('contacts'), 'start', 4]
+    [<span key='contacts' style={{ color: 'black' }}>{t('contacts')}</span>, 'start', 4]
   ]);
 
   useEffect((): void => {
@@ -77,6 +77,7 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
         empty={isNextTick && sortedAddresses && t('no addresses saved yet, add any existing address')}
         header={headerRef.current}
         isSplit
+        className='table-text'
       >
         {isNextTick && sortedAddresses?.map(({ address, isFavorite }): React.ReactNode => (
           <Address
@@ -96,6 +97,9 @@ const StyledDiv = styled.div`
   .summary-box-contacts {
     align-items: center;
   }
+    .table-text{
+    color:black;
+    }
 `;
 
 export default React.memo(Overview);

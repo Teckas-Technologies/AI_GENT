@@ -306,6 +306,7 @@ function Endpoints ({ className = '', offset, onClose }: Props): React.ReactElem
             label={t('Fork Locally')}
             onClick={_onLocalFork}
             tooltip='fork-locally-btn'
+            className="fork-locally-button" 
           />
           <Button
             icon='sync'
@@ -376,7 +377,9 @@ const StyledSidebar = styled(Sidebar)`
     top: 1rem;
     right: 1rem;
   }
-
+  .fork-locally-button {
+    color: white; /* Apply white color to the button */
+  }
   .endpointCustom {
     input {
       padding-right: 4rem;

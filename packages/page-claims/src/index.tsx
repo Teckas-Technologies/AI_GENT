@@ -199,7 +199,7 @@ function ClaimsApp ({ basePath }: Props): React.ReactElement<Props> {
       <Columar>
         <Columar.Column>
           <Card withBottomMargin>
-            <h2>{t('1. Select your {{chain}} account', {
+            <h2 style={{ color: 'black' }}>{t('1. Select your {{chain}} account', {
               replace: {
                 chain: systemChain
               }
@@ -229,7 +229,7 @@ function ClaimsApp ({ basePath }: Props): React.ReactElement<Props> {
             // to be able to know the statement kind so that the users can sign it
             (step >= Step.ETHAddress && !isPreclaimed && !isOldClaimProcess) && (
               <Card withBottomMargin>
-                <h2>{t('2. Enter the ETH address from the sale.')}</h2>
+                <h2 style={{ color: 'black' }}>{t('2. Enter the ETH address from the sale.')}</h2>
                 <Input
                   autoFocus
                   className='full'
@@ -251,7 +251,7 @@ function ClaimsApp ({ basePath }: Props): React.ReactElement<Props> {
             )}
           {(step >= Step.Sign && !isPreclaimed) && (
             <Card>
-              <h2>{t('{{step}}. Sign with your ETH address', { replace: { step: isOldClaimProcess ? '2' : '3' } })}</h2>
+              <h2 style={{ color: 'black' }}>{t('{{step}}. Sign with your ETH address', { replace: { step: isOldClaimProcess ? '2' : '3' } })}</h2>
               {!isOldClaimProcess && (
                 <Statement
                   kind={statementKind}

@@ -89,7 +89,7 @@ function Attest ({ accountId, className, ethereumAddress, onSuccess, statementKi
       <Card isError>
         <StyledDiv className={className}>
           {t('We found a pre-claim with this Polkadot address. However, attesting requires signing with this account. To continue with attesting, please add this account as an owned account first.')}
-          <h2>
+          <h2 style={{ color: 'black' }}>
             <FormatBalance
               label={t('Account balance:')}
               value={claimValue}
@@ -107,7 +107,7 @@ function Attest ({ accountId, className, ethereumAddress, onSuccess, statementKi
           kind={statementKind}
           systemChain={systemChain}
         />
-        <h2>
+        <h2 style={{ color: 'black' }}>
           <FormatBalance
             label={t('Account balance:')}
             value={claimValue}

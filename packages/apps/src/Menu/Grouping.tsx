@@ -32,7 +32,7 @@ function Grouping ({ className = '', isActive, name, routes }: Props): React.Rea
   return (
     <StyledLi className={`${className} ${isActive ? 'isActive' : ''}`}>
       <div className={`groupHdr ${!isActive ? 'highlight--color-contrast' : ''}`}>
-        <span className='smallHide'>{name}</span>
+        <span className='smallHide' style={{fontWeight: '600'}}>{name}</span>
         <Icon
           className='smallShow'
           icon={routes[0].icon}
@@ -67,8 +67,9 @@ const StyledLi = styled.li`
   }
 
   &.isActive .groupHdr {
-    background-color: var(--bg-tabs);
+    background-color:#243d3c;
     font-weight: var(--font-weight-normal);
+    color:white;
     margin-bottom: 0;
   }
 
